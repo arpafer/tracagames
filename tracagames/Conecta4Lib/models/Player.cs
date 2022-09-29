@@ -2,17 +2,19 @@
 {
     internal class Player
     {
+        private string nick;
         private Board board;
         private List<Card> cards;
         private Color _color;
 
         internal Color color { get { return _color; } }
 
-        internal Player(Board board, Color color)
+        internal Player(Board board, Color color, string nick)
         {
             this._color = color;
             this.board = board;
             this.cards = new List<Card>();
+            this.nick = nick;
         }
 
         internal void move(int column)

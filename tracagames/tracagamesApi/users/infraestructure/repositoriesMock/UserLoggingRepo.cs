@@ -2,33 +2,35 @@
 
 namespace tracagamesApi.users.infraestructure.repositoriesMock
 {
-    internal class UserLoggingRepo
-    {
-        private User user;
-
-        internal UserLoggingRepo(User user)
-        {
-            this.user = user;
+    internal class UserLoggingRepo: UserLoggingBaseRepoBase
+    {        
+        internal UserLoggingRepo(User user) : base(user)
+        {     
         }
 
-        internal void load()
+        internal override void load()
         {
             this.user = new User("user", "pass", "email@gmail.com");
         }
 
-        internal void signUp()
+        internal override void signUp()
         {
             this.user = new User("user", "pass", "email@gmail.com");
         }
 
-        internal void signIn()
+        internal override void signIn()
         {
-            this.user = new User("user", "pass", "email@gmail.com", true);
+            this.user.set("Antonio", "pass", "antonio.antoniopf@gmail.com", true);
         }
 
-        internal void logout()
+        internal override void logout()
         {
+            this.user.set("Antonio", "pass", "antonio.antoniopf@gmail.com", false);
+        }
 
+        internal bool exist()
+        {
+            return true;
         }
     }
 }

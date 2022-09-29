@@ -1,12 +1,14 @@
-﻿namespace tracagamesApi.users.application
+﻿using tracagamesApi.users.models;
+
+namespace tracagamesApi.users.application
 {
     public class UserGameApp
     {
         public List<dtos.Game> loadGames()
         {
-            new 
-            Tracagames tracagames = new Tracagames().loadGames();
-            return tracagames.cloneGamesToDto();
+            Tracagames tracagames = new Tracagames();
+            tracagames.loadGames();
+            return tracagames.cloneToDto();            
         }
     }
 }

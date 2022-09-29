@@ -35,7 +35,7 @@ namespace Conecta4LibTest.models
         public void Given_BoardEmpty_When_playerRedMovetoFirstColumn_Then_firstFreeCellIsCorrect()
         {
             Board board = new Board();            
-            Player player = new Player(board, Color.RED);
+            Player player = new Player(board, Color.RED, "Jugador");
             player.distributeCards();
             player.move(0);
             Cell cell = board.getFirstFreeCell(0);
@@ -46,7 +46,7 @@ namespace Conecta4LibTest.models
         public void Given_BoardEmpty_When_playerRedMovetoLastColumn_Then_firstFreeCellIsCorrect()
         {
             Board board = new Board();
-            Player player = new Player(board, Color.RED);
+            Player player = new Player(board, Color.RED, "Jugador");
             player.distributeCards();
             player.move(Board.NUM_COLS - 1);
             Cell cell = board.getFirstFreeCell(Board.NUM_COLS - 1);
@@ -57,7 +57,7 @@ namespace Conecta4LibTest.models
         public void Given_BoardEmpty_When_playerYellowMovetoFirstColumn_Then_firstFreeCellIsCorrect()
         {
             Board board = new Board();
-            Player player = new Player(board, Color.YELLOW);
+            Player player = new Player(board, Color.YELLOW, "Jugador");
             player.distributeCards();
             player.move(0);
             Cell cell = board.getFirstFreeCell(0);
@@ -68,7 +68,7 @@ namespace Conecta4LibTest.models
         public void Given_BoardEmpty_When_playerYellowMovetoLastColumn_Then_firstFreeCellIsCorrect()
         {
             Board board = new Board();
-            Player player = new Player(board, Color.YELLOW);
+            Player player = new Player(board, Color.YELLOW, "Jugador");
             player.distributeCards();
             player.move(Board.NUM_COLS - 1);
             Cell cell = board.getFirstFreeCell(Board.NUM_COLS - 1);
@@ -79,7 +79,7 @@ namespace Conecta4LibTest.models
         public void Given_Board_When_PlayerPushCardVerticalsInColumn_Then_IsVertical4()
         {
             Board board = new Board();
-            Player player = new Player(board, Color.RED);
+            Player player = new Player(board, Color.RED, "Jugador");
             player.distributeCards();
             for (int i = 0; i < Board.NUM_CARDS_WINNER; i++)
             {
@@ -92,7 +92,7 @@ namespace Conecta4LibTest.models
         public void Given_Board_When_PlayerPushCardInColumnHorizontals_Then_IsHorizontal4()
         {
             Board board = new Board();
-            Player player = new Player(board, Color.RED);
+            Player player = new Player(board, Color.RED, "Jugador");
             player.distributeCards();
             for (int i = 0; i < Board.NUM_CARDS_WINNER; i++)
             {
@@ -105,8 +105,8 @@ namespace Conecta4LibTest.models
         public void Given_Board_When_PlayerPushCardInDiagonalColumns_Then_IsDiagonal4()
         {
             Board board = new Board();
-            Player playerRed = new Player(board, Color.RED);
-            Player playerYellow = new Player(board, Color.YELLOW);
+            Player playerRed = new Player(board, Color.RED, "Jugador1");
+            Player playerYellow = new Player(board, Color.YELLOW, "Jugador2");
             playerRed.distributeCards();
             playerYellow.distributeCards();
             playerRed.move(0);

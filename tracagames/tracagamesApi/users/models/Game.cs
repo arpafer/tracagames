@@ -28,5 +28,9 @@
             this.guestUsers.Remove(user);
         }
 
+        internal application.dtos.Game cloneToDto()
+        {
+            return new application.dtos.Game() { name = this.name, description = this.description };
+        }
     }
 }

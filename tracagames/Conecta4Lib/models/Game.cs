@@ -1,41 +1,46 @@
 ﻿namespace Conecta4Lib.models
 {
-    public class Game
+    internal class Game
     {
         private const int NUM_PLAYERS = 2;        
         private Turn turn;
-        private Board board;              
+        private Board board;
 
-        public Game()
+        internal Game()
         {            
             this.board = new Board();
             this.turn = new Turn(this.board);
         }
 
-        public void setInitialPlayerGameRandom()
+        internal void setInitialPlayerGameRandom()
         {            
             this.turn.setInitialPlayerRandom();
         }
 
-        public void setTurnPlayer(int index)
+        internal void setTurnPlayer(int index)
         {
             this.turn.setPlayer(index);
         }
-        
 
-        public void move(int column)
+
+        internal void move(int column)
         {
             this.turn.move(column);
         }
 
-        public bool isFullColumn(int column)
+        internal bool isFullColumn(int column)
         {
             return this.board.isFullColumn(column);
         }
 
-        public bool hasWinner()
+        internal bool hasWinner()
         {
             return this.turn.hasWinner();
+        }
+
+        internal Player getCurrentPlayer()
+        {
+            return this.turn.getCurrentPlayer();
         }
     }
 }
