@@ -39,5 +39,5 @@ steps:
 - task: Npm@1
   inputs:
     command: 'custom'
-    workingDir: '**/frontend'
+    workingDir: '**/frontend/ClientApp'
     customCommand: 'npm run test'
