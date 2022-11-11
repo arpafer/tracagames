@@ -45,7 +45,7 @@ steps:
 - task: Npm@1
   inputs:
     command: 'install'
-    workingDir: 'tracagames/tracagames/frontend/ClientApp'
+    workingDir: './tracagames/tracagames/frontend/ClientApp'
   displayName: 'instalando npm'
 
 
