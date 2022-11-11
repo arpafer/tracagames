@@ -11,11 +11,11 @@ export class Conecta4Service {
 
   public connection;
   private sended: boolean;
-  public messageSubject$: BehaviorSubject<Message>;
+  // public messageSubject$: BehaviorSubject<Message>;
 
   constructor() {
 
-    this.messageSubject$ = new BehaviorSubject<Message>(new Message("", ""));
+   // this.messageSubject$ = new BehaviorSubject<Message>(new Message("", ""));
     this.sended = true;
     this.connection = new signalR.HubConnectionBuilder()
        .withUrl("https://localhost:7201/chat")
@@ -39,7 +39,7 @@ export class Conecta4Service {
   public connect() {
     this.connection.on("messageReceived", (username: string, message: string) => {
       console.log("mensaje recibido: " + username + ", " + message);
-      this.messageSubject$.next(new Message(username, message));
+      // this.messageSubject$.next(new Message(username, message));
    });
   }
 }

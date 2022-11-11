@@ -2,3 +2,11 @@ C:\Desarrollo\Varios\NET\tracagames\tracagames\Conecta4Lib\obj\Debug\net6.0\Cone
 C:\Desarrollo\Varios\NET\tracagames\tracagames\Conecta4Lib\obj\Debug\net6.0\Conecta4Lib.AssemblyInfoInputs.cache
 C:\Desarrollo\Varios\NET\tracagames\tracagames\Conecta4Lib\obj\Debug\net6.0\Conecta4Lib.AssemblyInfo.cs
 C:\Desarrollo\Varios\NET\tracagames\tracagames\Conecta4Lib\obj\Debug\net6.0\Conecta4Lib.csproj.CoreCompileInputs.cache
+C:\Desarrollo\Varios\NET\tracagames\tracagames\Conecta4Lib\bin\Debug\net6.0\Conecta4Lib.deps.json
+C:\Desarrollo\Varios\NET\tracagames\tracagames\Conecta4Lib\bin\Debug\net6.0\Conecta4Lib.dll
+C:\Desarrollo\Varios\NET\tracagames\tracagames\Conecta4Lib\bin\Debug\net6.0\Conecta4Lib.pdb
+C:\Desarrollo\Varios\NET\tracagames\tracagames\Conecta4Lib\obj\Debug\net6.0\Conecta4Lib.csproj.AssemblyReference.cache
+C:\Desarrollo\Varios\NET\tracagames\tracagames\Conecta4Lib\obj\Debug\net6.0\Conecta4Lib.dll
+C:\Desarrollo\Varios\NET\tracagames\tracagames\Conecta4Lib\obj\Debug\net6.0\refint\Conecta4Lib.dll
+C:\Desarrollo\Varios\NET\tracagames\tracagames\Conecta4Lib\obj\Debug\net6.0\Conecta4Lib.pdb
+C:\Desarrollo\Varios\NET\tracagames\tracagames\Conecta4Lib\obj\Debug\net6.0\ref\Conecta4Lib.dll

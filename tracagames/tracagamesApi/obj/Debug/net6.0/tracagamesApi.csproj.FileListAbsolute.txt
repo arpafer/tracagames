@@ -30,7 +30,6 @@ C:\Desarrollo\Varios\NET\tracagames\tracagames\tracagamesApi\obj\Debug\net6.0\tr
 C:\Desarrollo\Varios\NET\tracagames\tracagames\tracagamesApi\obj\Debug\net6.0\tracagamesApi.AssemblyInfoInputs.cache
 C:\Desarrollo\Varios\NET\tracagames\tracagames\tracagamesApi\obj\Debug\net6.0\tracagamesApi.AssemblyInfo.cs
 C:\Desarrollo\Varios\NET\tracagames\tracagames\tracagamesApi\obj\Debug\net6.0\tracagamesApi.csproj.CoreCompileInputs.cache
-C:\Desarrollo\Varios\NET\tracagames\tracagames\tracagamesApi\obj\Debug\net6.0\tracagamesApi.MvcApplicationPartsAssemblyInfo.cs
 C:\Desarrollo\Varios\NET\tracagames\tracagames\tracagamesApi\obj\Debug\net6.0\tracagamesApi.MvcApplicationPartsAssemblyInfo.cache
 C:\Desarrollo\Varios\NET\tracagames\tracagames\tracagamesApi\obj\Debug\net6.0\tracagamesApi.dll
 C:\Desarrollo\Varios\NET\tracagames\tracagames\tracagamesApi\obj\Debug\net6.0\refint\tracagamesApi.dll

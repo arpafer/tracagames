@@ -13,6 +13,11 @@ export class Game {
        this._imageBase64 = imageBase64;
    }
 
+   public isComplete(): boolean {
+      return this._id != null && this._id != "" && this._name != null && this._name != "" && this._description != null && this._description != "" &&
+             this._imageBase64 != null && this._imageBase64 != "";
+   }
+
    public set id(id: string) {
       this._id = id;
    }
@@ -32,7 +37,7 @@ export class Game {
    public getId(): string {
      return this._id;
    }
-   
+
    public getName(): string {
       return this._name;
    }

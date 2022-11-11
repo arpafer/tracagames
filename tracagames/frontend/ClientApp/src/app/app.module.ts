@@ -37,7 +37,7 @@ import { MaterialModule } from './material/material.module';
     MaterialModule,
     ReactiveFormsModule
   ],
-  providers: [],
+  providers: [HttpClientModule],
   bootstrap: [AppComponent]
 })
 export class AppModule { }

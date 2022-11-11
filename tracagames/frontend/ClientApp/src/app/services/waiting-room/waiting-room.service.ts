@@ -1,7 +1,7 @@
 import { WaitingUser } from './../../models/waitingUser/waiting-user';
 import { environment } from './../../../environments/environment';
 import { Subject, Observable } from 'rxjs';
-import { HttpClient, HttpHeaders, HttpParams, HttpParamsOptions } from '@angular/common/http';
+import { HttpClient, HttpHeaders, HttpParams } from '@angular/common/http';
 import { User } from './../../models/user';
 import { Injectable } from '@angular/core';
 import * as signalR from '@microsoft/signalr';
@@ -9,7 +9,7 @@ import * as signalR from '@microsoft/signalr';
 @Injectable({
   providedIn: 'root'
 })
-export class WaitingRoomService {  
+export class WaitingRoomService {
 
    private users$: Subject<User[]> = new Subject<User[]>();
    private users: User[];
@@ -18,7 +18,7 @@ export class WaitingRoomService {
    private waitingUser: WaitingUser;
 
    constructor(private httpClient: HttpClient) {
-      this.waitingUser = new WaitingUser(new User("", "", false, ""), "", false);      
+      this.waitingUser = new WaitingUser(new User("", "", false, ""), "", false);
       this.users$ = new Subject<User[]>();
       this.waitingUserAlready$ = new Subject<boolean>();
       this.users = [];
@@ -50,7 +50,7 @@ export class WaitingRoomService {
       console.log("usuario disponible: " + userName + " email: " + email);
       const user: User = new User(userName, email, true);
       this.users.push(user);
-      this.users$.next(this.users);      
+      this.users$.next(this.users);
    });
   }
 
@@ -73,21 +73,21 @@ export class WaitingRoomService {
          (waitingUser: WaitingUser) => {
           if (waitingUser == null) {
             this.connectionHub.send("NewUser", user.userName, user.email)
-            .then((done) => {            
+            .then((done) => {
               this.waitingUser = new WaitingUser(user, user.getGameName(), true);
               this.insertUser(this.waitingUser);
-              console.log("USUARIO ENVIADO CON EXITO");            
+              console.log("USUARIO ENVIADO CON EXITO");
               this.waitingUserAlready$.next(false);
             }).catch((e) => console.log("ERROR DE ENVIO: " + e.Message));
           } else {
              this.waitingUserAlready$.next(true);
               console.log("El usuario ya está en espera");
-          }        
+          }
          }, error => {
             console.log("Error: " + error.Message);
          }
       );
-      // console.log("Email: " + user.email);     
+      // console.log("Email: " + user.email);
    }
 
    getUsers$(): Observable<User[]> {
@@ -96,13 +96,13 @@ export class WaitingRoomService {
 
    getWaitingUserAlready$(): Observable<boolean> {
        return this.waitingUserAlready$.asObservable();
-   }  
+   }
 
    getWaitingUsers(gameName: string) {
     /*  const user1: User = new User("Player1", "player1@email.com", true);
       const user2: User = new User("Player2", "player2@email.com", true);
       this.users.push(user1);
-      this.users.push(user2); */      
+      this.users.push(user2); */
       this.httpClient.get<WaitingUser[]>(environment.urlApi + "WaitingRoom/GetWaitingUsers?gameName=" + gameName).subscribe(
          (waitingUsers: WaitingUser[]) => {
           this.users = [];
@@ -122,7 +122,7 @@ export class WaitingRoomService {
      if (this.waitingUser.userName != null && this.waitingUser.userName != "") {
         const email = user.userName + "@email.com";
         // console.log(this.waitingUser);
-        // const waitingUser = new WaitingUser(user, user.getGameName(), true);     
+        // const waitingUser = new WaitingUser(user, user.getGameName(), true);
         this.httpClient.delete<WaitingUser>(environment.urlApi + "WaitingRoom/deleteWaitingUser?info=" + btoa(email) + "|" + btoa(user.getGameName())).subscribe(
           (waitingUser: WaitingUser) => {
             this.connectionHub.send("RemoveUser", user.userName, user.email)
@@ -130,7 +130,7 @@ export class WaitingRoomService {
                console.log("USUARIO ELIMINADO CON EXITO");
                this.initWaitingUser();
              })
-            .catch((e) => console.log("ERROR DE ENVIO: " + e.Message));            
+            .catch((e) => console.log("ERROR DE ENVIO: " + e.Message));
           }
         );
      }
@@ -140,7 +140,7 @@ export class WaitingRoomService {
     var header = new HttpHeaders({
       'Content-Type':  'application/json'
     });
-    const strUser = JSON.stringify(user);         
+    const strUser = JSON.stringify(user);
      this.httpClient.post<WaitingUser>(environment.urlApi + "WaitingRoom/addWaitingUser", strUser, { headers: header }).subscribe(
       (waitingUser: WaitingUser) => {
        // this.users.push(waitingUser);
