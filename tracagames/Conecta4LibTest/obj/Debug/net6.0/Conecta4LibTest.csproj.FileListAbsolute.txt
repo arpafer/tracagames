@@ -202,3 +202,12 @@ C:\Users\Antonio\Desktop\DESARROLLO\tracagames\tracagames\Conecta4LibTest\obj\De
 C:\Users\Antonio\Desktop\DESARROLLO\tracagames\tracagames\Conecta4LibTest\obj\Debug\net6.0\Conecta4LibTest.pdb
 C:\Users\Antonio\Desktop\DESARROLLO\tracagames\tracagames\Conecta4LibTest\obj\Debug\net6.0\Conecta4LibTest.genruntimeconfig.cache
 C:\Users\Antonio\Desktop\DESARROLLO\tracagames\tracagames\Conecta4LibTest\obj\Debug\net6.0\ref\Conecta4LibTest.dll
+C:\Desarrollo\Varios\NET\tracagames\tracagames\Conecta4LibTest\bin\Debug\net6.0\CoverletSourceRootsMapping
+C:\Desarrollo\Varios\NET\tracagames\tracagames\Conecta4LibTest\obj\Debug\net6.0\Conecta4LibTest.csproj.AssemblyReference.cache
+C:\Desarrollo\Varios\NET\tracagames\tracagames\Conecta4LibTest\obj\Debug\net6.0\Conecta4LibTest.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\Varios\NET\tracagames\tracagames\Conecta4LibTest\obj\Debug\net6.0\Conecta4LibTest.AssemblyInfoInputs.cache
+C:\Desarrollo\Varios\NET\tracagames\tracagames\Conecta4LibTest\obj\Debug\net6.0\Conecta4LibTest.AssemblyInfo.cs
+C:\Desarrollo\Varios\NET\tracagames\tracagames\Conecta4LibTest\obj\Debug\net6.0\Conecta4LibTest.csproj.CoreCompileInputs.cache
+C:\Desarrollo\Varios\NET\tracagames\tracagames\Conecta4LibTest\obj\Debug\net6.0\Conecta4LibTest.dll
+C:\Desarrollo\Varios\NET\tracagames\tracagames\Conecta4LibTest\obj\Debug\net6.0\ref\Conecta4LibTest.dll
+C:\Desarrollo\Varios\NET\tracagames\tracagames\Conecta4LibTest\obj\Debug\net6.0\Conecta4LibTest.pdb

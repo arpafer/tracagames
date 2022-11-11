@@ -3,6 +3,7 @@ using tracagamesApi.users.application.dtos;
 using tracagamesApi.users.infraestructure.repositoriesMock;
 
 // For more information on enabling Web API for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+using tracagamesApi.users.application;
 
 namespace tracagamesApi.users.infraestructure.controllers
 {
@@ -12,9 +13,9 @@ namespace tracagamesApi.users.infraestructure.controllers
     {
         // GET: api/<GamesController>
         [HttpGet]
-        public IEnumerable<string> Get()
+        public List<tracagamesApi.users.application.dtos.Game> Get()
         {
-            return new string[] { "value1", "value2" };
+            return new UserGameApp().loadGames();
         }
 
         // GET api/<GamesController>/5

@@ -1,0 +1,5 @@
+C:\Desarrollo\Varios\NET\tracagames\tracagames\tracagamesLib\obj\Debug\net6.0\rummyLib.csproj.AssemblyReference.cache
+C:\Desarrollo\Varios\NET\tracagames\tracagames\tracagamesLib\obj\Debug\net6.0\rummyLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\Varios\NET\tracagames\tracagames\tracagamesLib\obj\Debug\net6.0\rummyLib.AssemblyInfoInputs.cache
+C:\Desarrollo\Varios\NET\tracagames\tracagames\tracagamesLib\obj\Debug\net6.0\rummyLib.AssemblyInfo.cs
+C:\Desarrollo\Varios\NET\tracagames\tracagames\tracagamesLib\obj\Debug\net6.0\rummyLib.csproj.CoreCompileInputs.cache

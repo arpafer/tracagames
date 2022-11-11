@@ -12,7 +12,7 @@
             this.playerIndex = 0;
             for (int i = 0; i < NUM_PLAYERS; i++)
             {
-                this.players.Add(new Player(board, (Color)i));
+                this.players.Add(new Player(board, (Color)i, ""));
                 this.players[i].distributeCards();                
             }
         }

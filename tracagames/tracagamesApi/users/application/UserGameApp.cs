@@ -1,4 +1,5 @@
 ﻿using tracagamesApi.users.models;
+using tracagamesApi.users.infraestructure.repositoriesMock;
 
 namespace tracagamesApi.users.application
 {
@@ -6,9 +7,9 @@ namespace tracagamesApi.users.application
     {
         public List<dtos.Game> loadGames()
         {
-            Tracagames tracagames = new Tracagames();
-            tracagames.loadGames();
-            return tracagames.cloneToDto();            
+           GamesCatalogueRepo catalogue = new GamesCatalogueRepo();
+           catalogue.loadAll();
+           return catalogue.cloneToDto();            
         }
     }
 }

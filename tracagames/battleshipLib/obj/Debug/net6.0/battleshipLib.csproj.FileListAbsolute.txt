@@ -1,0 +1,5 @@
+C:\Desarrollo\Varios\NET\tracagames\tracagames\battleshipLib\obj\Debug\net6.0\battleshipLib.csproj.AssemblyReference.cache
+C:\Desarrollo\Varios\NET\tracagames\tracagames\battleshipLib\obj\Debug\net6.0\battleshipLib.GeneratedMSBuildEditorConfig.editorconfig
+C:\Desarrollo\Varios\NET\tracagames\tracagames\battleshipLib\obj\Debug\net6.0\battleshipLib.AssemblyInfoInputs.cache
+C:\Desarrollo\Varios\NET\tracagames\tracagames\battleshipLib\obj\Debug\net6.0\battleshipLib.AssemblyInfo.cs
+C:\Desarrollo\Varios\NET\tracagames\tracagames\battleshipLib\obj\Debug\net6.0\battleshipLib.csproj.CoreCompileInputs.cache

@@ -40,7 +40,8 @@
 
         internal Player getCurrentPlayer()
         {
-            return this.turn.getCurrentPlayer();
+            // return this.turn.getCurrentPlayer();
+            return null;
         }
     }
 }
