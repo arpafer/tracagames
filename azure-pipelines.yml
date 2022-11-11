@@ -48,7 +48,3 @@ steps:
     workingDir: './tracagames/tracagames/frontend/ClientApp'
   displayName: 'instalando npm'
 
-
-- script: |
-    npm run build
-  displayName: 'npm build'
