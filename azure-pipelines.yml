@@ -36,8 +36,19 @@ steps:
     codeCoverageTool: 'Cobertura'
     summaryFileLocation: '$(Agent.TempDirectory)/**/coverage.cobertura.xml' 
 
+- task: NodeTool@0
+  inputs:  
+    versionSource: 'spec'
+    versionSpec: '16.x.x'
+  displayName: 'Instalando Node.js'
+
 - task: Npm@1
   inputs:
-    command: 'custom'
-    workingDir: '**/frontend/ClientApp'
-    customCommand: 'npm run test'
+    command: 'install'
+    workingDir: 'tracagames/tracagames/frontend/ClientApp'
+  displayName: 'instalando npm'
+
+
+- script: |
+    npm run build
+  displayName: 'npm build'
