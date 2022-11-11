@@ -22,3 +22,10 @@ steps:
   inputs:
     command: 'build'
     projects: '**/**/*.csproj'
+    
+- task: DotNetCoreCLI@2
+  inputs:
+    command: 'test'
+    projects: '**/*Test/*.csproj'
+    arguments: '--configuration $(buildConfiguration) --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=cobertura'
+    testRunTitle: 'Tests del juego Conecta 4'
