@@ -4,7 +4,7 @@
 # https://aka.ms/yaml
 
 trigger:
-- main
+- master
 
 pool:
   vmImage: ubuntu-latest
@@ -21,14 +21,15 @@ steps:
 - task: DotNetCoreCLI@2
   inputs:
     command: 'build'
-    projects: '**/**/*.csproj'
-    
+    projects: 'tracagames/**/*.csproj'
+
 - task: DotNetCoreCLI@2
+  displayName: 'dotnet test'
   inputs:
     command: 'test'
-    projects: '**/*Test/*.csproj'
+    projects: 'tracagames/*test/*.csproj'
     arguments: '--configuration $(buildConfiguration) --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=cobertura'
-    testRunTitle: 'Tests del juego Conecta 4'
+    testRunTitle: 'Tests de la parte csharp del frontend'
 
 - task: PublishCodeCoverageResults@1
   displayName: 'Publish code coverage report'
@@ -36,8 +37,15 @@ steps:
     codeCoverageTool: 'Cobertura'
     summaryFileLocation: '$(Agent.TempDirectory)/**/coverage.cobertura.xml' 
 
-- task: Npm@1
+- task: DotNetCoreCLI@2
   inputs:
-    command: 'custom'
-    workingDir: '**/frontend/ClientApp'
-    customCommand: 'npm run test'
+    command: publish
+    publishWebProjects: True
+    arguments: '--configuration $(BuildConfiguration) --output $(Build.ArtifactStagingDirectory)'
+    zipAfterPublish: True
+
+# this code takes all the files in $(Build.ArtifactStagingDirectory) and uploads them as an artifact of your build.
+- task: PublishPipelineArtifact@1
+  inputs:
+    targetPath: '$(Build.ArtifactStagingDirectory)' 
+    artifactName: 'tracagamesApi'
