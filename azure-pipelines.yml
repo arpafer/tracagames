@@ -27,7 +27,7 @@ steps:
   displayName: 'dotnet test'
   inputs:
     command: 'test'
-    projects: 'tracagames/*test/*.csproj'
+    projects: 'tracagames/*Test/*.csproj'
     arguments: '--configuration $(buildConfiguration) --collect:"XPlat Code Coverage" -- DataCollectionRunSettings.DataCollectors.DataCollector.Configuration.Format=cobertura'
     testRunTitle: 'Tests de la parte csharp del frontend'
 
