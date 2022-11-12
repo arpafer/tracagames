@@ -1,0 +1,24 @@
+# This workflow will build a .NET project
+# For more information see: https://docs.github.com/en/actions/automating-builds-and-tests/building-and-testing-net
+
+name: .NET
+
+on:
+  push:
+    branches: [ "master" ]
+  pull_request:
+    branches: [ "master" ]
+
+jobs:
+  build:
+
+    runs-on: ubuntu-latest
+    name: Call Azure Pipeline
+
+    steps:
+    - name: Azure Pipelines Action
+      uses: Azure/pipelines@v1
+      with:
+        azure-devops-project-url: https://antoniopf.visualstudio.com/tracagames
+        azure-pipeline-name: 'arpafer.tracagames'
+        azure-devops-token: ${{ secrets.AZURE_DEVOPS_TOKEN }}
